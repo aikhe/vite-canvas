@@ -1,9 +1,14 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
-import Home from "../layouts/Home.jsx";
 import "../styles/index.css";
+
+import Home from "../layouts/Home.jsx";
 import ErrorPage from "./global-error.jsx";
+import School from "../layouts/School.jsx";
+import About from "../pages/about.jsx";
+import Contact from "../pages/contact.jsx";
+import Setting from "../pages/setting.jsx";
 
 const router = createBrowserRouter([
   {
@@ -13,7 +18,21 @@ const router = createBrowserRouter([
   },
   {
     path: "/homeschool",
-    element: <h1>homeschool</h1>,
+    element: <School />,
+    children: [
+      {
+        path: "about",
+        element: <About />,
+      },
+      {
+        path: "contact",
+        element: <Contact />,
+      },
+      {
+        path: "setting",
+        element: <Setting />,
+      },
+    ],
   },
 ]);
 
