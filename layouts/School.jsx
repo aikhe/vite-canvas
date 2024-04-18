@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { Outlet, Link } from "react-router-dom";
+import goods from "/At2xNCZZ.jpg";
 
 function School() {
   const navBar = [
