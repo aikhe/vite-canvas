@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { Outlet, Link } from "react-router-dom";
-import goods from "/At2xNCZZ.jpg";
+// import goods from "/At2xNCZZ.jpg";
 
 function School() {
   const navBar = [
@@ -51,8 +51,8 @@ function School() {
 
   return (
     <>
-      <header className="container-util mb-4 h-[5.7rem] bg-slate-600 p-4">
-        <h1 className="text-3xl font-bold">Welcome to my Website</h1>
+      <header className="container-util mb-4 h-[5.7rem] bg-slate-600 p-4 text-white">
+        <h1 className="text-3xl font-bold">Welcome to My Website</h1>
         <nav>
           <ul>
             {pageLink("/homeschool", "Home", "onHome")}
@@ -64,8 +64,12 @@ function School() {
       </header>
 
       {renderPage()}
+      {/* <div className="flex h-[70vh] w-[100%] flex-col items-center justify-center gap-2">
+        <img className="size-[15rem]" src={goods} alt="goods na finnaly" />
+        <p>monthly exam na mas-advance pa sakaniya.</p>
+      </div> */}
 
-      <footer className=" container-util fixed bottom-0 bg-red-600 p-1 text-center">
+      <footer className=" container-util fixed bottom-0 bg-red-600 p-1 text-center text-white">
         <p>&copy;2024 Simple Website. All rights reserved.</p>
       </footer>
     </>
